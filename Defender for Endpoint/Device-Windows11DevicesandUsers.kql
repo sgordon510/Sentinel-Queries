@@ -1,4 +1,7 @@
-//Finds Windows 10 devices enrolled in Defender for Endpoint and the last user who logged on interactively
+//Finds Windows 11 devices enrolled in Defender for Endpoint and the last user who logged on interactively
+
+//Data connector required for this query - M365 Defender - Device* tables
+
 DeviceInfo
 | where TimeGenerated > ago(60d)
 | where isnotempty( OSPlatform)
